@@ -16,41 +16,34 @@
         </ResourceDictionary>
     </UserControl.Resources>
 
-    <Grid VerticalAlignment="Top">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
-        <Slider Grid.Row="0" TickFrequency="5" Orientation="Horizontal" Minimum="1" Maximum="50" Value="25" />
-        <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="1" Grid.RowSpan="3"
-                    Margin="0 36 0 0">
-            <xd:XamlDisplayer x:Name="A">
-                <Slider TickFrequency="5" TickPlacement="BottomRight" Orientation="Vertical" Minimum="1" Maximum="50" />
-            </xd:XamlDisplayer>
+    <StackPanel VerticalAlignment="Center">
+        <xd:XamlDisplayer x:Name="A">
+            <Slider TickFrequency="5" Orientation="Horizontal" Minimum="1" Maximum="50" Value="25" />
+        </xd:XamlDisplayer>
+        <xd:XamlDisplayer x:Name="B">
+            <Slider TickFrequency="5" TickPlacement="BottomRight" Orientation="Vertical" Minimum="1" Maximum="50" />
+        </xd:XamlDisplayer>
+        <xd:XamlDisplayer x:Name="C">
             <Slider TickFrequency="25" TickPlacement="TopLeft" Orientation="Vertical" Minimum="1" Maximum="50" IsEnabled="False" Margin="24 8 0 8" />
-        </StackPanel>
-        <Slider Grid.Row="1" TickFrequency="5" Orientation="Horizontal" TickPlacement="BottomRight" Minimum="1" Maximum="50" Value="25" IsSelectionRangeEnabled="True"
+        </xd:XamlDisplayer>
+        <xd:XamlDisplayer x:Name="D">
+            <Slider TickFrequency="5" Orientation="Horizontal" TickPlacement="BottomRight" Minimum="1" Maximum="50" Value="25" IsSelectionRangeEnabled="True"
                 Margin="0 36 0 0" />
-        <Slider Grid.Row="2" TickFrequency="5" Orientation="Horizontal" TickPlacement="BottomRight" Minimum="1" Maximum="50" Value="25" IsEnabled="False"
+        </xd:XamlDisplayer>
+        <xd:XamlDisplayer x:Name="E">
+            <Slider TickFrequency="5" Orientation="Horizontal" TickPlacement="BottomRight" Minimum="1" Maximum="50" Value="25" IsEnabled="False"
                 Margin="0 36 0 0" />
-
-        <StackPanel Orientation="Horizontal" Grid.Row="3" Margin="0 16 0 0">
-            <TextBlock VerticalAlignment="Bottom">Try me</TextBlock>
+        </xd:XamlDisplayer>
+        <xd:XamlDisplayer x:Name="F">
             <Slider Minimum="0" Maximum="100" Style="{StaticResource MaterialDesignDiscreteSlider}" 
                     ToolTip="MaterialDesignDiscreteSlider"
                     Value="50"
                     Width="280" 
                     Margin="8 0 0 0"/>
-        </StackPanel>
-        <Slider Minimum="0" Maximum="10" Margin="0 24 0 0" Style="{StaticResource MaterialDesignDiscreteSlider}" 
-                Grid.Row="4" Width="260" HorizontalAlignment="Left" ToolTip="MaterialDesignDiscreteSlider"/>
-    </Grid>
+        </xd:XamlDisplayer>
+        <xd:XamlDisplayer x:Name="G">
+            <Slider Minimum="0" Maximum="10" Margin="0 24 0 0" Style="{StaticResource MaterialDesignDiscreteSlider}"
+                    Width="260" HorizontalAlignment="Left" ToolTip="MaterialDesignDiscreteSlider"/>
+        </xd:XamlDisplayer>
+    </StackPanel>
 </UserControl>

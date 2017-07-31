@@ -20,7 +20,7 @@
             </Style>
         </Grid.Resources>
         <Border Grid.Column="0" Padding="20">
-            <ContentPresenter x:Name="ContentPresenter" Margin="10" Content="{Binding Content}" />
+            <ContentPresenter x:Name="ContentPresenter" Margin="10"/>
         </Border>
         <Border Grid.Column="1">
             <avalonedit:TextEditor

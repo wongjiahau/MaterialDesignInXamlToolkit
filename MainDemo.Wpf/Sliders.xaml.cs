@@ -26,7 +26,7 @@ namespace MaterialDesignColors.WpfExample
             InitializeComponent();
             try {
                 string url =
-                    "https://raw.githubusercontent.com/wongjiahau/Displaying-XAML/master/WpfApplication1/WpfApplication1/MainWindow.xaml";
+                    "https://raw.githubusercontent.com/wongjiahau/MaterialDesignInXamlToolkit/New-Demo/MainDemo.Wpf/Sliders.xaml";
                 XamlDisplayer.DisplayXamlCode(this , url);
             }
             catch (Exception e) {
