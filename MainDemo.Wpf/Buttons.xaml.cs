@@ -13,52 +13,27 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MaterialDesignColors.WpfExample.Domain;
+using MaterialDesignDemo.XamlDisplayerClass;
 
-namespace MaterialDesignColors.WpfExample
-{
+namespace MaterialDesignColors.WpfExample {
     /// <summary>
     /// Interaction logic for Buttons.xaml
     /// </summary>
-    public partial class Buttons : UserControl
-    {
-        public Buttons()
-        {
+    public partial class Buttons : UserControl {
+        public Buttons() {
             InitializeComponent();
-
+            XamlDisplayer.DisplayXamlCode(this);
             FloatingActionDemoCommand = new AnotherCommandImplementation(Execute);
         }
 
         public ICommand FloatingActionDemoCommand { get; }
 
-        private void Execute(object o)
-        {
+        private void Execute(object o) {
             Console.WriteLine("Floating action button command. - " + (o ?? "NULL").ToString());
         }
 
-        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
-	    {
+        private void ButtonBase_OnClick(object sender , RoutedEventArgs e) {
             Console.WriteLine("Just checking we haven't suppressed the button.");
-		}
-
-        private void PopupBox_OnOpened(object sender, RoutedEventArgs e)
-        {
-            Console.WriteLine("Just making sure the popup has opened.");
-        }
-
-        private void PopupBox_OnClosed(object sender, RoutedEventArgs e)
-        {
-            Console.WriteLine("Just making sure the popup has closed.");
-        }
-
-        private void CountingButton_OnClick(object sender, RoutedEventArgs e)
-        {
-            if (CountingBadge.Badge == null || Equals(CountingBadge.Badge, ""))
-                CountingBadge.Badge = 0;
-
-            var next = int.Parse(CountingBadge.Badge.ToString()) + 1;
-
-            CountingBadge.Badge = next < 21 ? (object)next : null;
-
         }
     }
 }

@@ -39,7 +39,7 @@ namespace MaterialDesignDemo.XamlDisplayerClass {
 
         private static void OnContentPropertyChanged(DependencyObject d , DependencyPropertyChangedEventArgs e) {
             var xamlDisplayer = d as XamlDisplayer;
-            var content = e.NewValue as Control;
+            var content = e.NewValue as UIElement;
             xamlDisplayer.ContentPresenter.Content = content;
         }
         #endregion
@@ -104,7 +104,7 @@ namespace MaterialDesignDemo.XamlDisplayerClass {
                 string xamlToBeDisplayed = Beautify(node.InnerXml);
                 var nameAttribute = node.Attributes["x:Name"];
                 if (nameAttribute == null) {
-                    MessageBox.Show("Please specify the value of 'x:Name' for each XamlDisplayer");
+                    //MessageBox.Show("Please specify the value of 'x:Name' for each XamlDisplayer");
                 }
                 else {
                     (host.FindName(nameAttribute.Value) as XamlDisplayer)
