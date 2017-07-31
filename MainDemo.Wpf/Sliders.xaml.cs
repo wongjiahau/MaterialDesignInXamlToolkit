@@ -25,14 +25,11 @@ namespace MaterialDesignColors.WpfExample
         {
             InitializeComponent();
             try {
-                string url =
-                    "https://raw.githubusercontent.com/wongjiahau/MaterialDesignInXamlToolkit/New-Demo/MainDemo.Wpf/Sliders.xaml";
-                XamlDisplayer.DisplayXamlCode(this , url);
+                XamlDisplayer.DisplayXamlCode(this);                
             }
             catch (Exception e) {
                 MessageBox.Show(e.Message);
             }
-
         }
     }
 }

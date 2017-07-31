@@ -15,7 +15,7 @@
         </Grid.ColumnDefinitions>
         <Grid.Resources>
             <Style TargetType="Border">
-                <Setter Property="BorderThickness" Value="0.4"></Setter>
+                <Setter Property="BorderThickness" Value="1"></Setter>
                 <Setter Property="BorderBrush" Value="LightGray"></Setter>
             </Style>
         </Grid.Resources>
@@ -30,6 +30,7 @@
                 SyntaxHighlighting="XML" 
                 VerticalScrollBarVisibility="Hidden" 
                 HorizontalScrollBarVisibility="Hidden" 
+                Background="{x:Null}"
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Center" 
                 FontFamily="Consolas" 

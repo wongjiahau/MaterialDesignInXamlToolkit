@@ -71,24 +71,29 @@ namespace MaterialDesignDemo.XamlDisplayerClass {
             Clipboard.SetDataObject(_codeToBeCopied);
         }
 
-        public static void DisplayXamlCode(Control host , string sourceCodeUrl) {
-            string sourceCode = DownloadFile(sourceCodeUrl);
+        /// <summary>
+        /// Display the xaml code of each control by downloading files from github
+        /// </summary>
+        /// <param name="host">'this' pointer of the client class </param>
+        public static void DisplayXamlCode(Control host) {
+            const string OwnerName = "wongjiahau";
+            const string BranchName = "New-Demo";
+             string TypeName = host.GetType().Name;
+            string sourceUrl =
+                $"https://raw.githubusercontent.com/{OwnerName}/MaterialDesignInXamlToolkit/{BranchName}/MainDemo.Wpf/{TypeName}.xaml";
+            string sourceCode = DownloadFile(sourceUrl);
             var doc = new XmlDocument();
             doc.LoadXml(sourceCode);
             DisplayXamlCode(host , doc);
 
-            string DownloadFile(string sourceURL) //https://gist.github.com/nboubakr/7812375
+            string DownloadFile(string sourceURL) //copied from https://gist.github.com/nboubakr/7812375
             {
-                int bufferSize = 1024;
-                bufferSize *= 1000;
                 long existLen = 0;
                 var httpReq = (HttpWebRequest)WebRequest.Create(sourceURL);
                 httpReq.AddRange((int)existLen);
                 var httpRes = (HttpWebResponse)httpReq.GetResponse();
                 var responseStream = httpRes.GetResponseStream();
                 if (responseStream == null) return "Fail to fetch file";
-                int byteSize;
-                byte[] downBuffer = new byte[bufferSize];
                 var streamReader = new StreamReader(responseStream);
                 return streamReader.ReadToEnd();
             }

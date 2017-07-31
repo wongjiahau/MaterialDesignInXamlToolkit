@@ -8,6 +8,7 @@
         xmlns:domain1="clr-namespace:MaterialDesignDemo.Domain"
         xmlns:materialDesignDemo="clr-namespace:MaterialDesignDemo"
         Title="Material Design in XAML" Height="800" Width="1100"
+        WindowState="Maximized"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
         TextElement.FontSize="13"
