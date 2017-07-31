@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MaterialDesignDemo.XamlDisplayerClass;
 
 namespace MaterialDesignColors.WpfExample
 {
@@ -23,6 +24,15 @@ namespace MaterialDesignColors.WpfExample
         public Sliders()
         {
             InitializeComponent();
+            try {
+                string url =
+                    "https://raw.githubusercontent.com/wongjiahau/Displaying-XAML/master/WpfApplication1/WpfApplication1/MainWindow.xaml";
+                XamlDisplayer.DisplayXamlCode(this , url);
+            }
+            catch (Exception e) {
+                MessageBox.Show(e.Message);
+            }
+
         }
     }
 }
