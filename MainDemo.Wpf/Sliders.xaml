@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:xd="clr-namespace:MaterialDesignDemo.XamlDisplayerClass"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             >
 
     <UserControl.Resources>
         <ResourceDictionary>
@@ -15,35 +15,36 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </UserControl.Resources>
-
-    <StackPanel VerticalAlignment="Center">
-        <xd:XamlDisplayer x:Name="A">
-            <Slider TickFrequency="5" Orientation="Horizontal" Minimum="1" Maximum="50" Value="25" />
-        </xd:XamlDisplayer>
-        <xd:XamlDisplayer x:Name="B">
-            <Slider TickFrequency="5" TickPlacement="BottomRight" Orientation="Vertical" Minimum="1" Maximum="50" />
-        </xd:XamlDisplayer>
-        <xd:XamlDisplayer x:Name="C">
-            <Slider TickFrequency="25" TickPlacement="TopLeft" Orientation="Vertical" Minimum="1" Maximum="50" IsEnabled="False" Margin="24 8 0 8" />
-        </xd:XamlDisplayer>
-        <xd:XamlDisplayer x:Name="D">
-            <Slider TickFrequency="5" Orientation="Horizontal" TickPlacement="BottomRight" Minimum="1" Maximum="50" Value="25" IsSelectionRangeEnabled="True"
+    <ScrollViewer>
+        <StackPanel VerticalAlignment="Center">
+            <xd:XamlDisplayer x:Name="A">
+                <Slider TickFrequency="5" Orientation="Horizontal" Minimum="1" Maximum="50" Value="25" />
+            </xd:XamlDisplayer>
+            <xd:XamlDisplayer x:Name="B">
+                <Slider TickFrequency="5" TickPlacement="BottomRight" Orientation="Vertical" Minimum="1" Maximum="50" />
+            </xd:XamlDisplayer>
+            <xd:XamlDisplayer x:Name="C">
+                <Slider TickFrequency="25" TickPlacement="TopLeft" Orientation="Vertical" Minimum="1" Maximum="50" IsEnabled="False" Margin="24 8 0 8" />
+            </xd:XamlDisplayer>
+            <xd:XamlDisplayer x:Name="D">
+                <Slider TickFrequency="5" Orientation="Horizontal" TickPlacement="BottomRight" Minimum="1" Maximum="50" Value="25" IsSelectionRangeEnabled="True"
                 Margin="0 36 0 0" />
-        </xd:XamlDisplayer>
-        <xd:XamlDisplayer x:Name="E">
-            <Slider TickFrequency="5" Orientation="Horizontal" TickPlacement="BottomRight" Minimum="1" Maximum="50" Value="25" IsEnabled="False"
+            </xd:XamlDisplayer>
+            <xd:XamlDisplayer x:Name="E">
+                <Slider TickFrequency="5" Orientation="Horizontal" TickPlacement="BottomRight" Minimum="1" Maximum="50" Value="25" IsEnabled="False"
                 Margin="0 36 0 0" />
-        </xd:XamlDisplayer>
-        <xd:XamlDisplayer x:Name="F">
-            <Slider Minimum="0" Maximum="100" Style="{StaticResource MaterialDesignDiscreteSlider}" 
+            </xd:XamlDisplayer>
+            <xd:XamlDisplayer x:Name="F">
+                <Slider Minimum="0" Maximum="100" Style="{StaticResource MaterialDesignDiscreteSlider}" 
                     ToolTip="MaterialDesignDiscreteSlider"
                     Value="50"
                     Width="280" 
                     Margin="8 0 0 0"/>
-        </xd:XamlDisplayer>
-        <xd:XamlDisplayer x:Name="G">
-            <Slider Minimum="0" Maximum="10" Margin="0 24 0 0" Style="{StaticResource MaterialDesignDiscreteSlider}"
+            </xd:XamlDisplayer>
+            <xd:XamlDisplayer x:Name="G">
+                <Slider Minimum="0" Maximum="10" Margin="0 24 0 0" Style="{StaticResource MaterialDesignDiscreteSlider}"
                     Width="260" HorizontalAlignment="Left" ToolTip="MaterialDesignDiscreteSlider"/>
-        </xd:XamlDisplayer>
-    </StackPanel>
+            </xd:XamlDisplayer>
+        </StackPanel>
+    </ScrollViewer>
 </UserControl>
