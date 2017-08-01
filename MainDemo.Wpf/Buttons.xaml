@@ -114,7 +114,7 @@
             <Button Content="{materialDesign:PackIcon AirplaneTakeoff}" ToolTip="Embedding icon"/>
         </xd:XamlDisplayer>
         <xd:XamlDisplayer x:Name="S">
-            <StackPanel Orientation="Horizontal">
+            <StackPanel>
                 <RadioButton Style="{StaticResource MaterialDesignRadioButton}" Margin="0 0 8 8" VerticalAlignment="Center" Tag="True">
                     <RadioButton.IsChecked>
                         <Binding Path="Tag" RelativeSource="{RelativeSource Self}">
@@ -135,7 +135,7 @@
             </StackPanel>
         </xd:XamlDisplayer>
         <xd:XamlDisplayer x:Name="T">
-            <StackPanel Orientation="Horizontal">
+            <StackPanel>
                 <CheckBox Style="{StaticResource MaterialDesignCheckBox}" Margin="0 0 8 8" VerticalAlignment="Center">
                     Check
                 </CheckBox>

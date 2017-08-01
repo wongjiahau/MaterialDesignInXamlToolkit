@@ -100,7 +100,7 @@ namespace MaterialDesignDemo.XamlDisplayerClass {
         }
 
         private static void DisplayXamlCode(Control host , XmlNode node) {
-            if (node.LocalName == "XamlDisplayer") {
+            if (node.LocalName.Contains(nameof(XamlDisplayer))) {
                 string xamlToBeDisplayed = Beautify(node.InnerXml);
                 var nameAttribute = node.Attributes["x:Name"];
                 if (nameAttribute == null) {
@@ -158,7 +158,7 @@ namespace MaterialDesignDemo.XamlDisplayerClass {
         }
 
 
-        private void XamlDisplayer_OnLoaded(object sender, RoutedEventArgs e) {
+        private void XamlDisplayer_OnLoaded(object sender, RoutedEventArgs e) {            
             var parent = VisualTreeHelper.GetParent(this) as UIElement;
             if (parent != null) {
                 Grid.SetIsSharedSizeScope(parent , true);

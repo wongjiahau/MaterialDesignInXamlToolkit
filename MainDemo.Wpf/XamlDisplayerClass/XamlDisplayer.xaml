@@ -9,7 +9,7 @@
              >
     <Grid HorizontalAlignment="Center">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition SharedSizeGroup="Content" />
+            <ColumnDefinition SharedSizeGroup="Content" MinWidth="150"/>
             <ColumnDefinition SharedSizeGroup="XamlCode"/>
             <ColumnDefinition SharedSizeGroup="CopyButton"></ColumnDefinition>
         </Grid.ColumnDefinitions>
@@ -19,8 +19,8 @@
                 <Setter Property="BorderBrush" Value="LightGray"></Setter>
             </Style>
         </Grid.Resources>
-        <Border Grid.Column="0" Padding="20">
-            <ContentPresenter x:Name="ContentPresenter" Margin="10"/>
+        <Border Grid.Column="0" Padding="10">
+            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="ContentPresenter" Margin="10"/>
         </Border>
         <Border Grid.Column="1">
             <avalonedit:TextEditor
